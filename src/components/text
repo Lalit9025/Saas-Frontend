@@ -1,0 +1,14 @@
+public iv4 dns
+ec2-13-235-9-3.ap-south-1.compute.amazonaws.com
+
+rsync -avz --exclude 'node_modules' --exclude '.env' --exclude 'db' \
+-e "ssh -i ~/.ssh/india-lalit.pem" \
+. ubuntu@172-31-37-88:~/app
+scp -i "E:\awsdeploy\india-lalit.pem" deploy.tar.gz ubuntu@ip-172-31-37-88:~/app
+scp -i "E:\awsdeploy\india-lalit.pem" deploy.tar.gz ubuntu@ip-65.2.152.90:~/app
+
+ssh -i "E:\awsdeploy\india-lalit.pem" ubuntu@65.2.152.90
+USE mysql;
+UPDATE user SET authentication_string=PASSWORD('lalit@9025') WHERE User='root';
+FLUSH PRIVILEGES;
+EXIT;

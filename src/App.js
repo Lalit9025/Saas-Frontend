@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import { Route, Routes } from 'react-router-dom';
+import UserProfile from './pages/UserProfile';
+import PrivateRoute from './components/PrivateRoute';
+import Spinner from './components/Spinner';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+         <Route path = '/' element ={<RegisterPage/>}/>
+         <Route path = '/login' element ={<LoginPage/>}/>
+         <Route path = '/spinner' element ={<Spinner/>}/>
+         <Route path='/profile' element = {<PrivateRoute><UserProfile/></PrivateRoute>}/>
+         <Route path = '*' element ={<PageNotFound/>}/>
+
+      </Routes>
+      
+    </>
   );
 }
 

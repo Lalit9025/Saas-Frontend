@@ -1,0 +1,104 @@
+.main_con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    width: 30rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+
+.profileContainer {
+
+    text-align: center;
+  }
+  
+  .title {
+    margin-bottom: 40px;
+    font-size: 3em;
+  }
+  @media  screen and (max-width:500px){
+    .container{
+      width: 23rem;
+      padding: 0.5rem;
+    }
+    .title{
+      font-size: 1.5rem;
+    }
+  }
+
+  
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    align-items :center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .label {
+    align-items: center;
+    text-align: left;
+    width: 7rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .input {
+    align-items: center;
+    text-align: left;
+    width: 10rem;
+    padding: 10px;
+    
+  }
+  
+  .textarea {
+    width: 20rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .updateButton {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .spinner{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+    h2{
+      margin-left: 20px;
+      color: rgb(23, 71, 55);
+    }
+  }
+ 
